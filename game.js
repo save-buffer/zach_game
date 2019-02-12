@@ -6,10 +6,10 @@ const CYBER_Y_OFFSET = 90;
 const GATEWAY_Y_OFFSET = 90;
 const SQUARE_Y_OFFSET = -30;
 
-//Winning Square: (13, 8)
+//Winning Square: (14, 11)
 //These coordinates are the center of the Pylon
-const PYLON_X = 13;
-const PYLON_Y = 8;
+const PYLON_X = 14;
+const PYLON_Y = 11;
 
 //These coordinates are the top left of the image.
 //This is distinct from the pylon because gateway
@@ -135,7 +135,7 @@ function start_game()
 
     losing_screen_sound.loop = true;
     game_sound.loop = true;
-    
+
     reset();
     game.start();
 }
@@ -268,7 +268,7 @@ function draw_menu(x, y)
     if(clicked)
 	game.context.drawImage(launching, PLAY_X1, PLAY_Y1);
     else if((PLAY_X1 <= x && x <= PLAY_X2) &&
-       (PLAY_Y1 <= y && y <= PLAY_Y2))
+	    (PLAY_Y1 <= y && y <= PLAY_Y2))
 	game.context.drawImage(play_hover, PLAY_X1, PLAY_Y1);
 }
 
